@@ -1,0 +1,35 @@
+{
+  "name": "rest_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BHesseldieck/redi_FEDwJS_backend.git"
+  },
+  "keywords": [
+    "REST API",
+    "Express",
+    "NODE",
+    "MongoDB"
+  ],
+  "author": "Ben Hesseldieck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BHesseldieck/redi_FEDwJS_backend/issues"
+  },
+  "homepage": "https://github.com/BHesseldieck/redi_FEDwJS_backend#readme",
+  "dependencies": {
+    "async": "^2.4.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "forever": "^0.15.3",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.7",
+    "path": "^0.12.7"
+  }
+}
