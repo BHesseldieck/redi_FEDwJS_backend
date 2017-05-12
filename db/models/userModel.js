@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.promise = require('bluebird');
+mongoose.Promise = require('bluebird');
 
 const userSchema = new mongoose.Schema({
   firstName: String,
