@@ -5,7 +5,7 @@ const userCtrl = require('./db/controllers/userCtrl.js');
 
 const router = express.Router();
 
-router.get('/api/user', userCtrl.fetchUsers);
+router.get('/api/user', userCtrl.fetchUser);
 router.post('/api/newuser', userCtrl.createUser);
 router.delete('/api/deleteuser', userCtrl.deleteUser);
 router.post('/api/updateuser', userCtrl.updateUser);
