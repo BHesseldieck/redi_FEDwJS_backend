@@ -1,4 +1,3 @@
-const Promise = require('bluebird');
 const User = require('../models/userModel.js');
 
 exports.createUser = (req, res) => {
