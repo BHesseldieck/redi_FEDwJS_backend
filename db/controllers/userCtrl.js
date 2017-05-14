@@ -46,10 +46,20 @@ exports.deleteUser = (req, res) => {
 exports.fetchUser = (req, res) => {
   User.findOne({username: req.query.username})
   .then((foundUser) => {
-    console.log(foundUser);
     res.json(foundUser);
   })
   .catch((error) => {
     res.status(404).send('User does not exist');
   })
 };
+
+exports.fetchAll = (req, res) => {
+  User.find({}, (err, results) => {
+    if (err) {
+      res.status(500).send(`Fetching failed due to error: ${err}`);
+    } else {
+      res.json(results);
+    }
+  })
+};
+
