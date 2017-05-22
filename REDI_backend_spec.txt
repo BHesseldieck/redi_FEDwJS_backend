@@ -7,6 +7,7 @@ PUT update User
 
 
 DB Schema:
+username:
 first name:
 last name:
 Helper

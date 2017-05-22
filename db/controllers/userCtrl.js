@@ -13,7 +13,6 @@ exports.createUser = (req, res) => {
     phone: req.body.phone || 'none',
   })
   .then((createdUser) => {
-    console.log('created User:', createdUser);
     res.status(200).send('New User created successfully');
   })
   .catch((error) => {
@@ -43,7 +42,7 @@ exports.deleteUser = (req, res) => {
 };
 
 exports.fetchUser = (req, res) => {
-  User.findOne({username: req.query.username})
+  User.findOne({username: req.params.username})
   .then((foundUser) => {
     res.json(foundUser);
   })
@@ -55,7 +54,7 @@ exports.fetchUser = (req, res) => {
 exports.fetchAll = (req, res) => {
   User.find({}, (err, results) => {
     if (err) {
-      res.status(500).send(`Fetching failed due to error: ${err}`);
+      res.status(500).send(`Fetching all users failed due to error: ${err}`);
     } else {
       res.json(results);
     }
