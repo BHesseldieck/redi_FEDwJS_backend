@@ -47,7 +47,7 @@ exports.fetchUser = (req, res) => {
     res.json(foundUser);
   })
   .catch((error) => {
-    res.status(404).send('User does not exist');
+    res.status(500).send(`Fetching user ${req.params.username} failed`);
   })
 };
 
