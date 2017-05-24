@@ -25,8 +25,11 @@ exports.updateUser = (req, res) => {
     (err, updatedUser) => {
       if (err) {
         res.status(500).send(`Update failed due to error: ${err}`);
+      } 
+      if (updatedUser) {
+        res.json(updatedUser);
       } else {
-        res.status(200).send(updatedUser);
+        res.status(404).send(`User ${req.body.username} does not exist`);
       }
     })
 };
@@ -44,7 +47,11 @@ exports.deleteUser = (req, res) => {
 exports.fetchUser = (req, res) => {
   User.findOne({username: req.params.username})
   .then((foundUser) => {
-    res.json(foundUser);
+    if (foundUser) {
+      res.json(foundUser);
+    } else {
+      res.status(404).send(`User ${req.params.username} does not exist`);
+    }
   })
   .catch((error) => {
     res.status(500).send(`Fetching user ${req.params.username} failed`);
