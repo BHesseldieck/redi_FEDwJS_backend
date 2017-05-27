@@ -1,9 +1,10 @@
 REST API express (koa & async await) mongoDB
 
 GET User (helper or seeker)
+GET all Users
 POST new User
 DELETE USER
-PUT update User
+POST update User
 
 
 DB Schema:
