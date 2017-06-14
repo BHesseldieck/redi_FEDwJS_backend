@@ -1,0 +1,7 @@
+DELETE https://redi-zungebot.herokuapp.com/api/user/ HTTP/1.1
+Authorization: Token 123412341234
+Content-Type: application/json
+
+{
+  "username": "tiago"
+}

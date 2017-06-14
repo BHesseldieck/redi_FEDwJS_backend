@@ -1,0 +1,20 @@
+POST https://redi-zungebot.herokuapp.com/api/user/ HTTP/1.1
+Authorization: Token 123412341234
+Content-Type: application/json
+
+{
+  "username": "tiago",
+  "firstName": "Tiago",
+  "lastName": "Henriques",
+  "helper": true,
+  "seeker": false,
+  "bio": "Henriques, Tiago Henriques",
+  "email": "tiago.henriques@gmail.com",
+  "phone": "666",
+  "__v": 0,
+  "languages": [
+    "German",
+    "English",
+    "Portuguese"
+  ]
+}

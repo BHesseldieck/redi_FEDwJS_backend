@@ -1,0 +1,8 @@
+POST https://redi-zungebot.herokuapp.com/api/user/update/ HTTP/1.1
+Authorization: Token 123412341234
+Content-Type: application/json
+
+{
+  "username": "tiago",
+  "phone": "444"
+}

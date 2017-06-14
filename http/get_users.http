@@ -1,0 +1,2 @@
+GET https://redi-zungebot.herokuapp.com/api/user/all/ HTTP/1.1
+Authorization: Token 123412341234
