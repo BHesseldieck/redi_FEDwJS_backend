@@ -4,7 +4,7 @@ const express = require('express');
 const userCtrl = require('./db/controllers/userCtrl.js');
 
 const router = express.Router();
-const secret = process.env.secret //|| require('./keys').secret;
+const secret = process.env.secret; //|| require('./keys').secret;
 
 const authenticate = (req, res, next) => {
   if(req.headers.authorization === secret) {
